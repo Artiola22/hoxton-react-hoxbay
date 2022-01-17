@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
 
-function Categories (props){
-    return(
-       
-      <li className={`category_${props.category.id}`}>
+function Category (props){
+
+  
+  
+        return <li className={`category_${props.category.id}`}>
         {/* <!-- Use the Link component from React Router to create 
               the anchor tags
         --> */}
@@ -11,6 +12,6 @@ function Categories (props){
       </li>
      
    
-    )
+    
 }
-export default Categories
+export default Category

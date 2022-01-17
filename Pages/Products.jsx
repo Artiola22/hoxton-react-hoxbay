@@ -1,4 +1,4 @@
-import ProductItems from "./ProductItems"
+import ProductItems from "../src/components/ProductItems"
 
 function Products(props){
     return(

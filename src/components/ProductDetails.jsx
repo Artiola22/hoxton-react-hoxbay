@@ -23,7 +23,7 @@ function ProductDetails(props){
           alt={props.product.title}
         />
         <div className="product-detail__side" style={{ borderColor: 'var(--yellow)' }}>
-          <h3></h3>
+          
           <h2>{props.product.title}</h2>
           <p>
             {props.product.description}

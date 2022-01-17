@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
-import BasketItem from '../Pages/Basket'
-import Categories from '../Pages/Category'
+import { Navigate, Route, Routes } from 'react-router-dom'
+
+import Categories from './components/Category'
 import Header from './components/Header'
 import NotFound from '../Pages/NotFound'
-import ProductDetails from '../Pages/ProductDetails'
-import ProductItems from '../Pages/ProductItems'
+
+import ProductItems from './components/ProductItems'
 import Basket from '../Pages/Basket'
 import Products from '../Pages/Products'
-import ProductDetailsPage from './components/ProductDetailsPage'
+import ProductDetailsPage from '../Pages/ProductDetailsPage'
 import ProductCategory from '../Pages/ProductCategory'
 
 
@@ -38,9 +38,10 @@ function App() {
       <main>
         {
         <Routes>
+          <Route  index element={<Navigate replace to="/products"/>}/>
           <Route path='/products/:id' element={<ProductDetailsPage  updateQuantityOfProduct={updateQuantityOfProduct}  basket={basket} setBasket={setBasket}/>}/>
           <Route path='/products' element={<Products products={products} />} />
-          <Route path='/categories' element={<Categories  categories={Categories}/>}/>
+          <Route path='/categories' element={<Categories  />}/>
           <Route path='/categories/:id' element={<ProductCategory  products={products}/> }/>
           <Route path='/productItem' element={<ProductItems products={products} />}/>
           <Route path='/basket' element={<Basket  basket={basket} setbasket={setBasket} updateQuantityOfProduct={updateQuantityOfProduct}/>}/>

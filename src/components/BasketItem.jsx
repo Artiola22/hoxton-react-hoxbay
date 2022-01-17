@@ -1,4 +1,7 @@
 function BasketItem (props){
+
+    
+    
     return (
         <li>
         <article className="basket-container__item">
@@ -11,6 +14,10 @@ function BasketItem (props){
           <p>
             Qty:
             <select
+            defaultValue={props.basketItem.quantity}
+            onChange={e => {
+                props.updateQuantity (props.basketItem, Number(e.target.value))
+            }}
               ><option value="0">0</option
               ><option value="1">1</option
               ><option value="2">2</option

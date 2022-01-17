@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom"
-import ProductItems from "./ProductItems"
+import ProductItems from "../src/components/ProductItems"
 
 function ProductCategory (props){
 const params = useParams()
+console.log('Params:', params)
 let productCategory = props.product.filter(product => product.categoryId === Number(params.id))
 
     return (

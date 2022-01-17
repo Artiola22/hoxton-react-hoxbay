@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import ProductDetails from "../../Pages/ProductDetails"
+import ProductDetails from "../src/components/ProductDetails"
 
 
 function ProductDetailsPage (props){
@@ -14,7 +14,7 @@ function ProductDetailsPage (props){
         return <main>...</main>
     }
     if(product.title===undefined){
-        return <main>Not Found</main>
+        return <main>Product not Found!!!</main>
     }
     return (
         <main>
