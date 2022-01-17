@@ -14,17 +14,15 @@ function Header() {
       </div>
       <nav className="header__nav">
         <ul>
-          <Link to='/home'>
-            <li>Home</li>
-            
-          </Link>
-          <Link to='/categories'>
-            <li>Categories</li> 
-          </Link>
-          <Link>
-            <li>Basket</li>
-            
-          </Link>
+          <li>
+            <Link to='/products'>Home</Link>
+            </li>
+            <li>
+              <Link to='/categories'>Categories</Link>
+              </li>
+              <li>
+                <Link to='/basket'>Basket</Link>
+                </li>
         </ul>
       </nav>
     </header>

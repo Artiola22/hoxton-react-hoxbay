@@ -1,13 +1,13 @@
-function BasketItem(props){
+function BasketItem (props){
     return (
         <li>
         <article className="basket-container__item">
           <img
-            src={props.basket.image}
-            alt={props.basket.title}
+            src={props.basketItem.image}
+            alt={props.basketItem.title}
             width="90"
           />
-          <p>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</p>
+          <p>{props.basketItem.title}</p>
           <p>
             Qty:
             <select
@@ -18,7 +18,7 @@ function BasketItem(props){
             >
           </p>
           {/* <!-- The item total is calculated using the Qty selected value --> */}
-          <p>Item total: £109.95</p>
+          <p>Item total: £{props.basketItem.totalPrice}</p>
         </article>
       </li>
     )
