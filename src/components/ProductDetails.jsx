@@ -17,6 +17,7 @@ function ProductDetails(props){
   }
    
     return (
+      
         <section className="product-detail main-wrapper">
         <img
           src={props.product.image}

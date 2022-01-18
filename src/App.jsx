@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 
-import Categories from './components/Category'
+import Categories from '../Pages/Categories'
 import Header from './components/Header'
 import NotFound from '../Pages/NotFound'
 
